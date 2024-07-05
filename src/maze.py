@@ -1,5 +1,4 @@
 from cell import Cell
-import time
 import random
 
 class Maze:
@@ -57,7 +56,6 @@ class Maze:
         if self._win is None:
             return
         self._win.redraw()
-        #time.sleep(0.01)
 
     def _break_entrance_and_exit(self):
         self._cells[0][0].has_left_wall = False
@@ -68,7 +66,6 @@ class Maze:
     def _break_walls_r(self, i, j):
 
         self._cells[i][j].visited = True
-        print(f"CHECKING {i} {j}")
 
         while True:
             possible = []
